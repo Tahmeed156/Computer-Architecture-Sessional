@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project source="2.7.1" version="1.0">
+This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
+<lib desc="#Wiring" name="0">
+    <tool name="Splitter">
+      <a name="incoming" val="4"/>
+      <a name="bit1" val="0"/>
+      <a name="bit2" val="0"/>
+      <a name="bit3" val="1"/>
+    </tool>
+    <tool name="Constant">
+      <a name="width" val="4"/>
+      <a name="value" val="0xf"/>
+    </tool>
+  </lib>
+  <lib desc="#Gates" name="1"/>
+  <lib desc="#Plexers" name="2"/>
+  <lib desc="#Arithmetic" name="3"/>
+  <lib desc="#Memory" name="4">
+    <tool name="ROM">
+      <a name="contents">addr/data: 8 8
+0
+</a>
+    </tool>
+  </lib>
+  <lib desc="#I/O" name="5"/>
+  <lib desc="#Base" name="6">
+    <tool name="Text Tool">
+      <a name="text" val=""/>
+      <a name="font" val="SansSerif plain 12"/>
+      <a name="halign" val="center"/>
+      <a name="valign" val="base"/>
+    </tool>
+  </lib>
+  <main name="Hazard Checker"/>
+  <options>
+    <a name="gateUndefined" val="ignore"/>
+    <a name="simlimit" val="1000"/>
+    <a name="simrand" val="0"/>
+  </options>
+  <mappings>
+    <tool lib="6" map="Button2" name="Menu Tool"/>
+    <tool lib="6" map="Button3" name="Menu Tool"/>
+    <tool lib="6" map="Ctrl Button1" name="Menu Tool"/>
+  </mappings>
+  <toolbar>
+    <tool lib="6" name="Poke Tool"/>
+    <tool lib="6" name="Edit Tool"/>
+    <tool lib="6" name="Text Tool">
+      <a name="text" val=""/>
+      <a name="font" val="SansSerif plain 12"/>
+      <a name="halign" val="center"/>
+      <a name="valign" val="base"/>
+    </tool>
+    <sep/>
+    <tool lib="0" name="Pin">
+      <a name="tristate" val="false"/>
+    </tool>
+    <tool lib="0" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="labelloc" val="east"/>
+    </tool>
+    <tool lib="1" name="NOT Gate"/>
+    <tool lib="1" name="AND Gate"/>
+    <tool lib="1" name="OR Gate"/>
+  </toolbar>
+  <circuit name="Hazard Checker">
+    <a name="circuit" val="Hazard Checker"/>
+    <a name="clabel" val=""/>
+    <a name="clabelup" val="east"/>
+    <a name="clabelfont" val="SansSerif plain 12"/>
+    <appear>
+      <path d="M93,56 Q97,66 101,56" fill="none" stroke="#808080" stroke-width="2"/>
+      <rect fill="none" height="106" stroke="#000000" stroke-width="2" width="90" x="50" y="55"/>
+      <text font-family="Arial" font-size="10" font-weight="bold" text-anchor="middle" x="94" y="155">Hazard Checker</text>
+      <text font-family="SansSerif" font-size="12" text-anchor="middle" x="80" y="74">RegWrite</text>
+      <text font-family="SansSerif" font-size="12" text-anchor="middle" x="64" y="103">RD</text>
+      <text font-family="SansSerif" font-size="12" text-anchor="middle" x="64" y="133">RS</text>
+      <text font-family="SansSerif" font-size="12" text-anchor="middle" x="114" y="104">Hazard</text>
+      <circ-port height="8" pin="150,100" width="8" x="46" y="66"/>
+      <circ-port height="8" pin="150,200" width="8" x="46" y="96"/>
+      <circ-port height="8" pin="150,320" width="8" x="46" y="126"/>
+      <circ-port height="10" pin="680,230" width="10" x="135" y="95"/>
+      <circ-anchor facing="east" height="6" width="6" x="137" y="97"/>
+    </appear>
+    <wire from="(560,230)" to="(680,230)"/>
+    <wire from="(480,220)" to="(530,220)"/>
+    <wire from="(480,240)" to="(530,240)"/>
+    <wire from="(270,190)" to="(270,200)"/>
+    <wire from="(280,180)" to="(280,190)"/>
+    <wire from="(150,200)" to="(190,200)"/>
+    <wire from="(190,200)" to="(230,200)"/>
+    <wire from="(310,330)" to="(310,360)"/>
+    <wire from="(370,160)" to="(410,160)"/>
+    <wire from="(440,170)" to="(480,170)"/>
+    <wire from="(190,300)" to="(290,300)"/>
+    <wire from="(250,180)" to="(280,180)"/>
+    <wire from="(250,160)" to="(280,160)"/>
+    <wire from="(250,170)" to="(280,170)"/>
+    <wire from="(150,100)" to="(370,100)"/>
+    <wire from="(190,200)" to="(190,300)"/>
+    <wire from="(370,280)" to="(400,280)"/>
+    <wire from="(370,300)" to="(400,300)"/>
+    <wire from="(370,270)" to="(400,270)"/>
+    <wire from="(370,290)" to="(400,290)"/>
+    <wire from="(330,310)" to="(350,310)"/>
+    <wire from="(460,290)" to="(480,290)"/>
+    <wire from="(250,190)" to="(270,190)"/>
+    <wire from="(390,310)" to="(400,310)"/>
+    <wire from="(270,200)" to="(280,200)"/>
+    <wire from="(390,310)" to="(390,360)"/>
+    <wire from="(310,360)" to="(390,360)"/>
+    <wire from="(330,180)" to="(410,180)"/>
+    <wire from="(480,170)" to="(480,220)"/>
+    <wire from="(480,240)" to="(480,290)"/>
+    <wire from="(150,320)" to="(290,320)"/>
+    <wire from="(370,100)" to="(370,160)"/>
+    <comp lib="0" loc="(150,200)" name="Pin">
+      <a name="width" val="4"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="EX/MEM RD"/>
+    </comp>
+    <comp lib="3" loc="(330,310)" name="Subtractor">
+      <a name="width" val="4"/>
+    </comp>
+    <comp lib="1" loc="(330,180)" name="OR Gate">
+      <a name="inputs" val="4"/>
+    </comp>
+    <comp lib="0" loc="(230,200)" name="Splitter">
+      <a name="fanout" val="4"/>
+      <a name="incoming" val="4"/>
+    </comp>
+    <comp lib="0" loc="(680,230)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="label" val="EX Hazard"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="1" loc="(460,290)" name="NOR Gate"/>
+    <comp lib="0" loc="(150,320)" name="Pin">
+      <a name="width" val="4"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="ID/EX RS"/>
+    </comp>
+    <comp lib="1" loc="(560,230)" name="AND Gate">
+      <a name="size" val="30"/>
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="1" loc="(440,170)" name="AND Gate">
+      <a name="size" val="30"/>
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="0" loc="(150,100)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="EX/MEM RW"/>
+    </comp>
+    <comp lib="0" loc="(350,310)" name="Splitter">
+      <a name="fanout" val="4"/>
+      <a name="incoming" val="4"/>
+    </comp>
+  </circuit>
+  <circuit name="Memory Hazard Checker">
+    <a name="circuit" val="Memory Hazard Checker"/>
+    <a name="clabel" val=""/>
+    <a name="clabelup" val="east"/>
+    <a name="clabelfont" val="SansSerif plain 12"/>
+    <appear>
+      <rect fill="none" height="146" stroke="#000000" stroke-width="2" width="211" x="50" y="55"/>
+      <text font-family="SansSerif" font-size="12" text-anchor="middle" x="109" y="84">MEM/WB.RegWrite</text>
+      <text font-family="SansSerif" font-size="12" text-anchor="middle" x="94" y="113">MEM/WB.RD</text>
+      <text font-family="SansSerif" font-size="12" text-anchor="middle" x="86" y="174">EX Hazard</text>
+      <text font-family="SansSerif" font-size="12" text-anchor="middle" x="217" y="135">MEM Hazard</text>
+      <text font-family="SansSerif" font-size="12" text-anchor="middle" x="156" y="197">MEM Hazard Checker</text>
+      <text font-family="SansSerif" font-size="12" text-anchor="middle" x="83" y="144">ID/EX Rs</text>
+      <circ-port height="8" pin="160,110" width="8" x="46" y="76"/>
+      <circ-port height="8" pin="160,140" width="8" x="46" y="106"/>
+      <circ-port height="8" pin="160,170" width="8" x="46" y="136"/>
+      <circ-port height="8" pin="160,320" width="8" x="46" y="166"/>
+      <circ-port height="10" pin="560,300" width="10" x="255" y="125"/>
+      <circ-anchor facing="east" height="6" width="6" x="257" y="127"/>
+    </appear>
+    <wire from="(160,320)" to="(270,320)"/>
+    <wire from="(370,280)" to="(430,280)"/>
+    <wire from="(160,110)" to="(240,110)"/>
+    <wire from="(160,140)" to="(240,140)"/>
+    <wire from="(160,170)" to="(240,170)"/>
+    <wire from="(480,300)" to="(560,300)"/>
+    <wire from="(370,140)" to="(370,280)"/>
+    <wire from="(300,320)" to="(430,320)"/>
+    <wire from="(330,140)" to="(370,140)"/>
+    <comp lib="1" loc="(480,300)" name="AND Gate">
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="0" loc="(160,110)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="MEM/WB.RegWrite"/>
+    </comp>
+    <comp lib="0" loc="(160,320)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="EX Hazard"/>
+    </comp>
+    <comp loc="(330,140)" name="Hazard Checker"/>
+    <comp lib="0" loc="(160,140)" name="Pin">
+      <a name="width" val="4"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="MEM/WB.RD"/>
+    </comp>
+    <comp lib="0" loc="(160,170)" name="Pin">
+      <a name="width" val="4"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="ID/EX Rs"/>
+    </comp>
+    <comp lib="1" loc="(300,320)" name="NOT Gate"/>
+    <comp lib="0" loc="(560,300)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="label" val="MEM Hazard"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+  </circuit>
+  <circuit name="Forward Bit Generator">
+    <a name="circuit" val="Forward Bit Generator"/>
+    <a name="clabel" val=""/>
+    <a name="clabelup" val="east"/>
+    <a name="clabelfont" val="SansSerif plain 12"/>
+    <appear>
+      <rect fill="none" height="192" stroke="#000000" stroke-width="2" width="280" x="50" y="55"/>
+      <text font-family="SansSerif" font-size="12" text-anchor="middle" x="114" y="204">MEM/WB RegisterRd</text>
+      <text font-family="SansSerif" font-size="12" text-anchor="middle" x="109" y="174">MEM/WB RegWrite</text>
+      <text font-family="SansSerif" font-size="12" text-anchor="middle" x="113" y="114">EX/MEM RegisterRd</text>
+      <text font-family="SansSerif" font-size="12" text-anchor="middle" x="107" y="84">EX/MEM RegWrite</text>
+      <text font-family="SansSerif" font-size="12" text-anchor="middle" x="111" y="145">ID/EX RegisterRs/Rt</text>
+      <text font-family="SansSerif" font-size="12" text-anchor="middle" x="294" y="153">Forward</text>
+      <text font-family="SansSerif" font-size="12" text-anchor="middle" x="184" y="241">Forward Generator</text>
+      <circ-port height="8" pin="170,100" width="8" x="46" y="76"/>
+      <circ-port height="8" pin="170,130" width="8" x="46" y="106"/>
+      <circ-port height="8" pin="170,160" width="8" x="46" y="136"/>
+      <circ-port height="8" pin="170,360" width="8" x="46" y="166"/>
+      <circ-port height="8" pin="170,390" width="8" x="46" y="196"/>
+      <circ-port height="10" pin="1260,370" width="10" x="325" y="145"/>
+      <circ-anchor facing="east" height="6" width="6" x="327" y="147"/>
+    </appear>
+    <wire from="(270,160)" to="(270,420)"/>
+    <wire from="(270,420)" to="(590,420)"/>
+    <wire from="(1140,390)" to="(1140,410)"/>
+    <wire from="(500,130)" to="(500,450)"/>
+    <wire from="(850,130)" to="(850,390)"/>
+    <wire from="(890,340)" to="(890,410)"/>
+    <wire from="(890,340)" to="(1140,340)"/>
+    <wire from="(940,410)" to="(980,410)"/>
+    <wire from="(270,160)" to="(370,160)"/>
+    <wire from="(980,410)" to="(980,430)"/>
+    <wire from="(170,160)" to="(270,160)"/>
+    <wire from="(170,360)" to="(590,360)"/>
+    <wire from="(170,390)" to="(590,390)"/>
+    <wire from="(460,130)" to="(500,130)"/>
+    <wire from="(500,450)" to="(590,450)"/>
+    <wire from="(890,410)" to="(910,410)"/>
+    <wire from="(1180,370)" to="(1260,370)"/>
+    <wire from="(980,430)" to="(1000,430)"/>
+    <wire from="(500,130)" to="(850,130)"/>
+    <wire from="(850,390)" to="(1000,390)"/>
+    <wire from="(800,410)" to="(890,410)"/>
+    <wire from="(1050,410)" to="(1140,410)"/>
+    <wire from="(1140,340)" to="(1140,380)"/>
+    <wire from="(170,100)" to="(370,100)"/>
+    <wire from="(170,130)" to="(370,130)"/>
+    <wire from="(1140,380)" to="(1160,380)"/>
+    <wire from="(1140,390)" to="(1160,390)"/>
+    <comp lib="0" loc="(170,390)" name="Pin">
+      <a name="width" val="4"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="MEM/WB RegisterRd"/>
+    </comp>
+    <comp loc="(460,130)" name="Hazard Checker"/>
+    <comp loc="(800,410)" name="Memory Hazard Checker"/>
+    <comp lib="0" loc="(170,360)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="MEM/WB RegWrite"/>
+    </comp>
+    <comp lib="0" loc="(1180,370)" name="Splitter">
+      <a name="facing" val="west"/>
+    </comp>
+    <comp lib="6" loc="(1311,377)" name="Text">
+      <a name="text" val="Forward"/>
+    </comp>
+    <comp lib="1" loc="(940,410)" name="NOT Gate"/>
+    <comp lib="0" loc="(170,130)" name="Pin">
+      <a name="width" val="4"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="EX/MEM RegisterRd"/>
+    </comp>
+    <comp lib="0" loc="(170,100)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="EX/MEM RegWrite"/>
+    </comp>
+    <comp lib="0" loc="(1260,370)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="2"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(170,160)" name="Pin">
+      <a name="width" val="4"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="ID/EX RegisterRs"/>
+    </comp>
+    <comp lib="1" loc="(1050,410)" name="AND Gate">
+      <a name="inputs" val="2"/>
+    </comp>
+  </circuit>
+  <circuit name="Forwarding Unit">
+    <a name="circuit" val="Forwarding Unit"/>
+    <a name="clabel" val=""/>
+    <a name="clabelup" val="east"/>
+    <a name="clabelfont" val="SansSerif plain 12"/>
+    <appear>
+      <rect fill="none" height="132" stroke="#000000" stroke-width="2" width="128" x="50" y="50"/>
+      <path d="M84,127 Q87,170 153,84" fill="none" stroke="#000000" stroke-width="5"/>
+      <circ-port height="8" pin="180,140" width="8" x="176" y="66"/>
+      <circ-port height="8" pin="180,200" width="8" x="176" y="96"/>
+      <circ-port height="8" pin="180,260" width="8" x="176" y="116"/>
+      <circ-port height="8" pin="180,320" width="8" x="176" y="146"/>
+      <circ-port height="8" pin="180,380" width="8" x="46" y="96"/>
+      <circ-port height="8" pin="180,460" width="8" x="46" y="126"/>
+      <circ-port height="10" pin="870,210" width="10" x="85" y="45"/>
+      <circ-port height="10" pin="870,470" width="10" x="105" y="45"/>
+      <circ-anchor facing="east" height="6" width="6" x="177" y="67"/>
+    </appear>
+    <wire from="(370,170)" to="(370,430)"/>
+    <wire from="(340,230)" to="(340,490)"/>
+    <wire from="(400,140)" to="(400,400)"/>
+    <wire from="(370,430)" to="(420,430)"/>
+    <wire from="(370,170)" to="(420,170)"/>
+    <wire from="(220,230)" to="(340,230)"/>
+    <wire from="(250,320)" to="(250,520)"/>
+    <wire from="(250,520)" to="(420,520)"/>
+    <wire from="(180,460)" to="(420,460)"/>
+    <wire from="(250,260)" to="(420,260)"/>
+    <wire from="(200,170)" to="(370,170)"/>
+    <wire from="(310,200)" to="(420,200)"/>
+    <wire from="(180,260)" to="(220,260)"/>
+    <wire from="(700,210)" to="(870,210)"/>
+    <wire from="(700,470)" to="(870,470)"/>
+    <wire from="(200,170)" to="(200,200)"/>
+    <wire from="(220,230)" to="(220,260)"/>
+    <wire from="(180,140)" to="(400,140)"/>
+    <wire from="(400,140)" to="(420,140)"/>
+    <wire from="(400,400)" to="(420,400)"/>
+    <wire from="(180,200)" to="(200,200)"/>
+    <wire from="(310,200)" to="(310,380)"/>
+    <wire from="(340,490)" to="(420,490)"/>
+    <wire from="(340,230)" to="(420,230)"/>
+    <wire from="(180,320)" to="(250,320)"/>
+    <wire from="(180,380)" to="(310,380)"/>
+    <wire from="(250,260)" to="(250,320)"/>
+    <comp lib="0" loc="(870,470)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="2"/>
+      <a name="label" val="Forward B"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp loc="(700,210)" name="Forward Bit Generator">
+      <a name="label" val="Forward A Generator"/>
+    </comp>
+    <comp lib="0" loc="(180,260)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="MEM/WB RegWrite"/>
+    </comp>
+    <comp lib="0" loc="(180,200)" name="Pin">
+      <a name="width" val="4"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="EX/MEM RegisterRd"/>
+    </comp>
+    <comp lib="0" loc="(870,210)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="2"/>
+      <a name="label" val="Forward A"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(180,320)" name="Pin">
+      <a name="width" val="4"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="MEM/WB RegisterRd"/>
+    </comp>
+    <comp lib="0" loc="(180,460)" name="Pin">
+      <a name="width" val="4"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="ID/EX RegisterRt"/>
+    </comp>
+    <comp lib="0" loc="(180,380)" name="Pin">
+      <a name="width" val="4"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="ID/EX RegisterRs"/>
+    </comp>
+    <comp lib="0" loc="(180,140)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="EX/MEM RegWrite"/>
+    </comp>
+    <comp loc="(700,470)" name="Forward Bit Generator">
+      <a name="label" val="Forward B Generator"/>
+    </comp>
+  </circuit>
+</project>
